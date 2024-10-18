@@ -3,12 +3,12 @@ run-name: Setting up sample sql
 on: [push]
 jobs: 
     test-output:
-        runs-on: ubuntu-latest
+        runs-on: windows-latest
         steps:
         - name: Test output
           run: echo "Here is the test"
     connect-remote:
-        runs-on: ubuntu-latest
+        runs-on: windows-latest
         steps:
         - uses: actions/checkout@v3
         - name: Show databases
