@@ -8,7 +8,7 @@ jobs:
         - name: Test output
           run: echo "Here is the test"
         - name: Asegurar permisos de ejecución
-          run: chmod +x sample_sql.sql
+          run: chmod +x sql_sample\sample.sql
     connect-remote:
         runs-on: windows-latest
         steps:
