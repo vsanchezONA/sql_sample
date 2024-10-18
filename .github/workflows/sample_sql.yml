@@ -1,0 +1,9 @@
+name: sample_sql
+run-name: Setting up sample sql
+on: [push]
+jobs: 
+    test-output:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Test output
+            run: echo "Here is the test"
