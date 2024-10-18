@@ -6,4 +6,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Test output
-            run: echo "Here is the test"
+          run: echo "Here is the test"
