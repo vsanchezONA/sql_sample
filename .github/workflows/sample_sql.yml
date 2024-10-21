@@ -10,6 +10,6 @@ jobs:
     connect-remote:
         runs-on: windows-latest
         steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: Show databases
-          run: mysql -h localhost --port 3306 -u ${{ secrets.DB_USER }} -p${{ secrets.DB_PASS }} -e "SHOW DATABASES";
+          run: mysql -h ${{secrets.DB_HOSTNAME}} --port 3306 -u ${{ secrets.DB_USER }} -p${{ secrets.DB_PASS }} -e "SHOW DATABASES";
