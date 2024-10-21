@@ -12,6 +12,6 @@ jobs:
         steps:
         - uses: actions/checkout@v3
         - name: Show databases
-          run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -p -e "SHOW DATABASES";
+          run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -e "SHOW DATABASES";
         - name: Run sql on remote
-          run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -p 'PRUEBA' -e ".\source sql_sample\sample.sql";
+          run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -e ".\source sql_sample\sample.sql";
