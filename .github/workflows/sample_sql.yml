@@ -7,8 +7,6 @@ jobs:
         steps:
         - name: Test output
           run: echo "Here is the test"
-        - name: Asegurar permisos de ejecución
-          run: chmod +x C:\Users\vsanchez\Documents\git_prueba_mysql\sql_sample\sample.sql
     connect-remote:
         runs-on: windows-latest
         steps:
@@ -16,4 +14,4 @@ jobs:
         - name: Show databases
           run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -p ${{ secrets.DB_PASS }} -e "SHOW DATABASES";
         - name: Run sql on remote
-          run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -p ${{ secrets.DB_PASS }} -e "source sql_sample\sample.sql";
+          run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u ${{ secrets.DB_USER }} -p ${{ secrets.DB_PASS }} -e ".\source sql_sample\sample.sql";
